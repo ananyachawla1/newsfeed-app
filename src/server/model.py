@@ -21,7 +21,7 @@ def generate_content(p):
     conversation_history.append({'role': 'assistant', 'content': assistant_message})
     return assistant_message
 
-if _name_ == "_main_":
+if __name__ == "_main_":
     user_input = sys.argv[1]
     response = generate_content(user_input)
     print(response)

@@ -33,14 +33,15 @@ app.get('/chat', (req, res) => {
 
   pythonProcess.stdout.on('data', (data) => {
     scriptOutput += data.toString();
-  });
+});
 
-  pythonProcess.stderr.on('data', (data) => {
+pythonProcess.stderr.on('data', (data) => {
     console.error(`stderr: ${data}`);
-  });
+});
 
-  pythonProcess.on('close', (code) => {
+pythonProcess.on('close', (code) => {
     console.log(`Python script exited with code ${code}`);
+    console.log("Script output..", scriptOutput)
     res.send(scriptOutput);
   });
 });
