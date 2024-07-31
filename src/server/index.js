@@ -9,8 +9,8 @@ app.use(bodyParser.json());
 app.use(cors());  // Enable CORS for all routes
 
 // Define the endpoint to handle chat requests
-app.get('/chat', (req, res) => {
-    const userInput = "What is the budget?";
+app.post('/chat', (req, res) => {
+    const userInput = req.body.user_input;
 
     if (!userInput) {
         return res.status(400).json({ error: 'Input is required' });

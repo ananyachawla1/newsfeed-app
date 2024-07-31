@@ -1518,6 +1518,7 @@ const NewsFeed = () => {
           <Grid item key={index} xs={12} md={4}>
             <NewsFeedCard
                 title={newsItem.title}
+                url={newsItem.url}
                 description={newsItem.text}
                 date={newsItem.date}
                 image={newsItem.image_url}
