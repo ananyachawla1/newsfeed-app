@@ -25,3 +25,4 @@ if __name__ == "_main_":
     user_input = sys.argv[1]
     response = generate_content(user_input)
     print(response)
+
